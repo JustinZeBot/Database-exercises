@@ -25,8 +25,7 @@ SELECT CONCAT(first_name,' ',last_name,' was Born on : ',birth_date,' And Hired 
 # For your query of employees born on Christmas and hired in the 90s, use datediff() to find how many days they have
 # been working at the company (Hint: You might also need to use now() or curdate()).
 
-SELECT CONCAT(first_name,' ',last_name,' - ', datediff(hire_date,curdate())) FROM employees ORDER BY first_name;
-
+SELECT CONCAT(first_name,' ',last_name )AS full_name, datediff(curdate(),hire_date) FROM employees ORDER BY first_name,hire_date limit 50;
 
 
 #
